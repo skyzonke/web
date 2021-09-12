@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Questionnaire culture générale
+</title>
+<style>
+input[type="range"] {
+    position: relative;
+    margin-left: 1em;
+}
+input[type="range"]:after,
+input[type="range"]:before {
+    position: absolute;
+    top: 1em;
+    color: #aaa;
+}
+input[type="range"]:before {
+    left:0em;
+    content: attr(min);
+}
+input[type="range"]:after {
+    right: 0em;
+    content: attr(max);
+}
+</style>
+</head>
+
+<body>
+<h1> Veuillez répondre aux questions suivantes : </h1>
+<form name="quizz" method="GET" action="reponse.php">
+<p>
+Quelle est la longueur d'un marathon ?
+<br/>
+<input type="text" name="marathon" required size="6" maxlength="6" pattern="[0-9]{1,2}([,][0-9]{1,2})?" 
+title="entrez un nombre entier à 2 chiffres ou décimal avec au maximum 2 chiffres avant et après la ,">
+</p>
+<p>
+Quelles sont les disciplines représentées dans un triathlon ?
+<br/>
+<ul>
+<li> Rugby <input type="checkbox" name="rugby"> </li>
+<li> Ping-Pong <input type="checkbox" name="pingpong"> </li>
+<li> Course <input type="checkbox" name="course"> </li>
+<li> Natation <input type="checkbox" name="natation"> </li>
+<li> Badminton <input type="checkbox" name="badminton"> </li>
+<li> Roller <input type="checkbox" name="roller"> </li>
+<li> Velo <input type="checkbox" name="velo"> </li>
+</ul>
+</p>
+<p>
+Où se dérouleront les prochains Jeux Olympiques d'été ?
+<select name="jo">
+<option value="orleans">Orléans</option>
+<option value="newyork">New-York</option>
+<option value="londres">Londres</option>
+<option value="shangai">Shangaï</option>
+<option value="paris">Paris</option>
+<option value="rome">Rome</option>
+<option value="rio">Rio de Janeiro</option>
+</select>
+</p>
+<p>
+Quel est le pourcentage de femmes parmi les athlètes présents au JO de 2012 ?
+<input type="range" value="50" max="100" min="0" step="1" name="femmes" 
+onchange="rangevalue.value=value">
+<output id="rangevalue">50</output>%
+</p>
+<p>
+Combien de buts Zidane à t-il marqué lors de la finale de la Coupe du Monde 1998 ?
+1<input type="radio" name="rb1" value="1">
+2<input type="radio" name="rb1" value="2">
+3<input type="radio" name="rb1" value="3">
+4<input type="radio" name="rb1" value="4">
+</p>
+<p>
+Quelles sont les couleurs du maillot des panthères du Fleury Loiret Handball ?
+<select name="s1[]" multiple size=5>
+<option value="jaune">Jaune
+<option value="rose">Rose
+<option value="bleu">Bleu
+<option value="noir">Noir
+<option value="blanc">Blanc
+<option value="vert">Vert
+</select>
+<br/>
+<input type="submit" value ="Répondre">
+<br/>
+<input type="reset" value="Remise à zéro">
+</form>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formulaire</title>
+    </head>
+    <body>
+        <h1> Veuillez répondre aux questions suivantes : </h1>
+        <form name="quizz" method="GET" action="reponseForm.php">
+            <section>
+                <p>
+                    <label for="qst1">Question 1</label>
+                </p>
+                <input type="text" name="qst1" id="qst1" required size="6" maxlength="6" pattern="[0-9]{1,2}?" 
+                title="entrez une valeur à 2 chiffres">
+            </section>
+            <section>
+                <p>
+                    <label for="qst2">Question 2</label>
+                </p>
+                <ul>
+                    <li> <label for="cb1">Reponse 1</label> <input type="checkbox" name="cb1" id="cb1"> </li>
+                    <li> <label for="cb2">Reponse 2</label> <input type="checkbox" name="cb2" id="cb2"> </li>
+                    <li> <label for="cb3">Reponse 3</label> <input type="checkbox" name="cb3" id="cb3"> </li>
+                    <li> <label for="cb4">Reponse 4</label> <input type="checkbox" name="cb4" id="cb4"> </li>
+                    <li> <label for="cb5">Reponse 5</label> <input type="checkbox" name="cb5" id="cb5"> </li>
+                    <li> <label for="cb6">Reponse 6</label> <input type="checkbox" name="cb6" id="cb6"> </li>
+                    <li> <label for="cb7">Reponse 7</label> <input type="checkbox" name="cb7" id="cb7"> </li>
+                </ul>
+            </section>
+            <section>
+                <p>
+                    <label for="qst3">Question 3</label>
+                </p>
+                <select name="qst3" id="qst3">
+                    <option value="slv1">slv1</option>
+                    <option value="slv2">slv2</option>
+                    <option value="slv3">slv3</option>
+                    <option value="slv4">slv4</option>
+                    <option value="slv5">slv5</option>
+                    <option value="slv6">slv6</option>
+                    <option value="slv7">slv7</option>
+                </select>
+            </section>
+            <section>
+                <p>
+                    <label for="qst4">Question 4</label>
+                </p>
+                <input type="range" value="50" max="100" min="0" step="1" name="femmes" id="qst4" 
+                onchange="rangevalue.value=value">
+                <output id="rangevalue">50</output>%
+            </section>
+            <section>
+                <p>
+                    <label for="qst5">Question 5 :</label>
+                    <label for="rb1">1</label>
+                    <input type="radio" name="rb1" id="rb1" value="1">
+                    <label for="rb2">2</label>
+                    <input type="radio" name="rb1" id="rb2" value="2">
+                    <label for="rb3">3</label>
+                    <input type="radio" name="rb1" id="rb3" value="3">
+                    <label for="rb4">4</label>
+                    <input type="radio" name="rb1" id="rb4" value="4">
+                </p>
+            </section>
+            <section>
+                <label for="qst6">Question 6</label>
+                <select name="s1[]" multiple size=5>
+                    <option value="opt1">opt1
+                    <option value="opt2">opt2
+                    <option value="opt3">opt3
+                    <option value="opt4">opt4
+                    <option value="opt5">opt5
+                    <option value="opt6">opt6
+                </select>
+            </section>
+            <section>
+                <label for="passwd">Password</label>
+                <input type="passwd" name="password" id="passwd">
+            </section>
+            <section>
+                <label for="file">File</label>
+                <input type="file" name="file" id="file">
+            </section>
+            <section>
+                <label for="url">url</label>
+                <input type="url" name="url" id="url" placeholder="?????@??????.???">
+            </section>
+            <section><input type="submit" value ="Submit"></section>
+            <section><input type="reset" value="Reset"></section>
+    </body>
+</html>
